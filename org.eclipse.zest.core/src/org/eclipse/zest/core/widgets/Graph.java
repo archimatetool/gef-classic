@@ -1407,7 +1407,8 @@ public class Graph extends FigureCanvas implements IContainer2 {
 						layoutStyle = LayoutStyles.NO_LAYOUT_NODE_RESIZING;
 					}
 
-					if ((nodeStyle & ZestStyles.NODES_NO_LAYOUT_ANIMATION) == 0) {
+					// if ((nodeStyle & ZestStyles.NODES_NO_LAYOUT_ANIMATION) == 0) {
+					if ((nodeStyle & ZestStyles.NODES_NO_LAYOUT_ANIMATION) == 0 && animationEnabled) { // Archi
 						Animation.markBegin();
 					}
 					if (getLayoutAlgorithm() instanceof LayoutAlgorithm.Zest1 zest1) {
@@ -1442,7 +1443,10 @@ public class Graph extends FigureCanvas implements IContainer2 {
 						internalGetLayoutContext().applyLayout(scheduledLayoutClean);
 						layoutContext.flushChanges(false);
 					}
-					Animation.run(ANIMATION_TIME);
+					// Animation.run(ANIMATION_TIME);
+					if (animationEnabled) { // Archi
+						Animation.run(animationTime);
+					}
 					getLightweightSystem().getUpdateManager().performUpdate();
 					synchronized (Graph.this) {
 						scheduledLayoutRunnable = null;
@@ -1760,5 +1764,26 @@ public class Graph extends FigureCanvas implements IContainer2 {
 			zoomManager = new ZoomManager(getRootLayer(), getViewport());
 		}
 		return zoomManager;
+	}
+
+	// Archi
+	// Animation access
+	private int animationTime = ANIMATION_TIME;
+	private boolean animationEnabled = false;
+
+	public void setAnimationTime(int animationTime) {
+		this.animationTime = animationTime;
+	}
+
+	public int getAnimationTime() {
+		return animationTime;
+	}
+
+	public void setAnimationEnabled(boolean enabled) {
+		animationEnabled = enabled;
+	}
+
+	public boolean isAnimationEnabled() {
+		return animationEnabled;
 	}
 }
