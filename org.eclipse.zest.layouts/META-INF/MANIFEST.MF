@@ -14,5 +14,5 @@ Export-Package: org.eclipse.zest.layouts,
  org.eclipse.zest.layouts.progress
 Require-Bundle: org.eclipse.swt;bundle-version="[3.4.0,4.0.0)";visibility:=reexport,
  org.eclipse.draw2d
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.eclipse.zest.layouts

@@ -22,7 +22,7 @@ Export-Package: org.eclipse.draw2d,
  org.eclipse.draw2d.zoom
 Require-Bundle: org.eclipse.swt;bundle-version="[3.126.0,4.0.0)";visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: org.eclipse.draw2d
 Require-Capability: eclipse.swt;filter:="(image.format=svg)";resolution:=optional
 
