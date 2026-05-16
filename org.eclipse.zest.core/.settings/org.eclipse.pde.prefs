@@ -1,2 +1,3 @@
 compilers.use-project=true
 eclipse.preferences.version=1
+compilers.p.build.java.compliance=2
