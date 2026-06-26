@@ -65,6 +65,11 @@
 				<configuration>
 					<timestampProvider>jgit</timestampProvider>
 					<jgit.dirtyWorkingTree>warning</jgit.dirtyWorkingTree>
+					<jgit.ignore>
+					org.eclipse.jdt.core.prefs
+					org.eclipse.pde.api.tools.prefs
+					org.eclipse.pde.prefs
+					</jgit.ignore>
 					<sourceReferences>
 						<generate>true</generate>
 					</sourceReferences>
