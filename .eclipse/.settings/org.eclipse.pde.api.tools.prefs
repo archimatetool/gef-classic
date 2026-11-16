@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+LEAK_EXTEND=Ignore
+LEAK_METHOD_RETURN_TYPE=Ignore
+LEAK_IMPLEMENT=Ignore
+ILLEGAL_IMPLEMENT=Ignore
+ILLEGAL_REFERENCE=Ignore

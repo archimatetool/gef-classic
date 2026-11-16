@@ -42,5 +42,10 @@
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/.eclipse/.settings/org.eclipse.jdt.ui.prefs</locationURI>
 		</link>
+        <link>
+            <name>.settings/org.eclipse.pde.api.tools.prefs</name>
+            <type>1</type>
+            <locationURI>PARENT-1-PROJECT_LOC/.eclipse/.settings/org.eclipse.pde.api.tools.prefs</locationURI>
+        </link>
 	</linkedResources>
 </projectDescription>
